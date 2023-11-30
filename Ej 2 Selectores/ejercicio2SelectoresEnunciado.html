@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Combinación de selectores CSS</title>
+		<style>
+				.noticia:first-child{
+					color: rgb(11, 255, 11);
+				}
+				
+				.noticia section p{
+					color: rgb(255, 28, 28);
+				}
+
+				.noticia + *{
+					color: rgb(48, 48, 255);
+				}
+
+				.noticia + * + *{
+					color: rgb(0, 0, 0);
+				}
+
+				section:not([class]){
+					color: rgb(200, 0, 250);
+				}
+		</style>
+	</head>
+	<body>
+		<section class='noticia'>
+			<p>Soy un hijo de una secci&oacute;n noticias</p>
+			<section>
+				<p>Soy un nieto de una secci&oacute;n noticias</p>
+			</section>
+		</section>
+		<p>Soy el hermano inmediatamente menor de una secci&oacute;n noticias</p>
+		<p>Soy el segundo hermano inmediatamente menor de una secci&oacute;n noticias</p>
+		<section>
+			<p>Secci&oacute;n sin clase expresa</p>
+		</section>
+	</body>
+</html>
+
+

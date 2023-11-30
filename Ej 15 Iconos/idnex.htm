@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Superposición de imágenes</title>
+		<style>
+			@font-face {
+				font-family: "GoodDog";
+				src: url("./fonts/GoodDog-webfont.ttf") format("truetype");
+			}
+
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: "GoodDog", sans-serif;
+				height: 100vh; /* Para asegurarse de que el cuerpo cubra toda la altura de la ventana */
+				margin: 0; /* Elimina el margen predeterminado del cuerpo */
+			}
+
+			.container {
+				height: 850px;
+				width: 450px;
+			}
+
+			ul.menu {
+				width: 50%;
+				background: url("./images/bg.jpg") no-repeat;
+				background-size: contain; /* Agregado para que la imagen de fondo se extienda a lo largo de la altura del contendor */
+				padding: 10px 22px;
+				height: 100vh; /* Asegura que el menú ocupe toda la altura de la ventana */
+			}
+
+			ul.menu li {
+				color: #47170b;
+				font-size: 40px;
+				list-style: none;
+				padding: 12px 0;
+				margin: 14px auto;
+			}
+
+			ul.menu li:before {
+				content: "";
+				display: inline-block;
+				width: 64px;
+				height: 64px;
+				margin-right: 10px;
+				vertical-align: middle;
+				background: url("./images/sprite.png") no-repeat;
+			}
+
+			ul.menu li#cakes:before {
+				background-position: 0 0;
+			}
+
+			ul.menu li#donuts:before {
+				background-position: 0 -64px;
+			}
+
+			ul.menu li#rolls:before {
+				background-position: 0 -128px;
+			}
+
+			ul.menu li#pies:before {
+				background-position: 0 -196px;
+			}
+
+			.text {
+				font-family: "GoodDog", sans-serif;
+				font-size: 1.5em;
+				display: block;
+				margin-left: 5px;
+				color: rgb(83, 47, 22);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<ul class="menu">
+				<li id="cakes" class="text">Cake</li>
+				<li id="donuts" class="text">Donut</li>
+				<li id="rolls" class="text">Roll</li>
+				<li id="pies" class="text">Pie</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			body {
+				font: 12px arial, helvetica, sans-serif;
+			}
+
+			#toucan {
+				display: block;
+				width: 200px;
+				height: 63px;
+				background-image: url(toucancombo2.jpg);
+				text-indent: -999em;
+			}
+
+			.first:hover {
+				background-position: center;
+			}
+			.second:hover {
+				background-position: center;
+			}
+			.last:hover {
+				background-position: center;
+			}
+			.last:active {
+				background-position: bottom;
+			}
+			.center {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="center">
+			<p><a href="#" class="first" id="toucan">Toucan</a></p>
+			<p><a href="#" class="second" id="toucan">Toucan</a></p>
+			<p><a href="#" class="last" id="toucan">Toucan</a></p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Styling</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: rgb(255, 255, 255);
+      }
+
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin: 10px;
+      }
+
+      #instagram {
+        transform: rotate(20deg);
+      }
+      #nike {
+        transform: rotate(90deg);
+      }
+      #twitter {
+        transform: rotate(-180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="instagram.jpg" alt="Instagram Logo" id="instagram" />
+    <img src="nike.png" alt="Nike Logo" id="nike" />
+    <img src="twitter.jpg" alt="Twitter Logo" id="twitter" />
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Ejercicio 7 - Fondos CSS</title>
+		<style type="text/css" media="screen">
+			.examplemultiplebackgroundsa {
+				width: 500px;
+				height: 250px;
+				position: relative;
+				background: url("old_paper.jpg") no-repeat center;
+				background-size: cover;
+			}
+			.examplemultiplebackgroundsa::before {
+				content: "";
+				background: url("decoration.png") no-repeat top left;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+			}
+			.examplemultiplebackgroundsa::after {
+				content: "";
+				background: url("ribbon.png") no-repeat bottom right;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+			}
+			.examplemultiplebackgroundsa p {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				color: black;
+				font-weight: bold;
+				font-size: 24px;
+				z-index: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="examplemultiplebackgroundsa">
+			<p>Ejercicio de fondos múltiples</p>
+		</div>
+	</body>
+</html>

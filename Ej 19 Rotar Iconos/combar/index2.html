@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Styling 2</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: rgb(255, 255, 255);
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+
+      .image-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+      }
+
+      .image-section h1 {
+        margin-bottom: 10px;
+      }
+
+      .image-section img {
+        width: 80%;
+        height: auto;
+        object-fit: cover;
+        margin: 10px;
+      }
+
+      .image-section #winter {
+        margin-right: 100px;
+      }
+
+      .image-section #winter-shadow {
+        filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
+        position: relative; /* Añade posición relativa para las pseudo-clases */
+      }
+
+      .image-section #winter-shadow:before,
+      .image-section #winter-shadow:after {
+        content: ""; /* Contenido vacío */
+        position: absolute;
+        width: 100%;
+        height: 50%; /* Ajusta la altura de la sombra */
+        z-index: -1;
+      }
+
+      /* Sombra izquierda */
+      .image-section #winter-shadow:before {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 0, 0, 0.3) 0%,
+          rgba(255, 0, 0, 0) 100%
+        );
+        transform: rotate(-3deg); /* Ajusta el ángulo de la sombra izquierda */
+      }
+
+      /* Sombra derecha */
+      .image-section #winter-shadow:after {
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 255, 0) 0%,
+          rgba(0, 0, 255, 0.3) 100%
+        );
+        transform: rotate(3deg); /* Ajusta el ángulo de la sombra derecha */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-section">
+        <h1>Sin Efectos</h1>
+        <img src="winter.jpg" alt="Winter Landscape" id="winter" />
+      </div>
+      <div class="image-section">
+        <h1>Con Efecto Sombra</h1>
+        <img
+          src="winter.jpg"
+          alt="Winter Landscape with shadow effect on the image"
+          id="winter-shadow"
+        />
+      </div>
+    </div>
+  </body>
+</html>

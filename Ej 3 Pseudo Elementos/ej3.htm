@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Icono para archivos PDF</title>
+    <style>
+      /* Selecciona todos los enlaces con atributo href que terminen en ".pdf" */
+      a[href$=".pdf"] {
+        position: relative;
+      }
+
+      a[href$=".pdf"]::after {
+        content: url("https://cdn-icons-png.flaticon.com/128/4726/4726010.png");
+        transform: scale(0.5);
+        top: 0;
+        left: 100%; /* Coloca el icono a la derecha del texto */
+        margin-left: 5px; /* Agrega un espacio entre el texto y el icono */
+      }
+    </style>
+  </head>
+  <body>
+    <p>Descarga este <a href="archivo.pdf">archivo PDF</a></p>
+    <br>
+    <p>Descarga este <a href="a2.pdf">archivo PDF</a></p>
+  </body>
+</html>

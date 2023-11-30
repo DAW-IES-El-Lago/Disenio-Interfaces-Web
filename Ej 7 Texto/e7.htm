@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo de Estilos CSS</title>
+    <style>
+      /* Estilo para los bloques de citas en español */
+      q:lang(es) {
+        quotes: "«" "»";
+      }
+
+      /* Estilo para los bloques de citas en inglés */
+      q:lang(en) {
+        quotes: '"' '"';
+      }
+
+      /* Estilo para el primer párrafo del documento */
+      p:first-of-type {
+        font-weight: bold;
+        font-style: italic;
+        text-transform: uppercase;
+      }
+
+      /* Estilo para la primera letra del primer párrafo */
+      p:first-of-type::first-letter {
+        font-size: 3em;
+      }
+
+      /* Estilo para el contenedor de párrafos */
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      /* Estilo para los párrafos */
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>Ambrose Bierce dijo (más o menos) que</p>
+      <q lang="es"
+        >una cita es una manera de repetir erróneamente las palabras de otros</q
+      >
+      <p>Ambrose Bierce dijo (más o menos) que</p>
+      <q lang="en"
+        >a quotation is the act of repeating erroneously the words of another</q
+      >
+    </div>
+  </body>
+</html>

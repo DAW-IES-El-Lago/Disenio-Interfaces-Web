@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Margen Negativo</title>
+    <!-- Enlace a la fuente de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        position: relative;
+        background-color: #353535;
+        display: flex;
+        justify-content: center;
+      }
+      .fuente-google {
+        position: absolute;
+        font-family: "Pixelify Sans", cursive;
+        font-size: 150px;
+        color: hsl(267, 97%, 69%);
+      }
+
+      .fuente-web {
+        font-family: "Noto Serif", serif;
+        font-size: 100px;
+        color: hsla(186, 92%, 67%, 0.922);
+        opacity: 0.5;
+        position: absolute;
+        margin-top: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="fuente-google">Encabezado</h1>
+    <h2 class="fuente-web">Texto explicativo</h2>
+  </body>
+</html>

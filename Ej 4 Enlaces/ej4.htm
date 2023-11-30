@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diferenciar enlaces</title>
+    <style>
+        /* Estilo para los enlaces a páginas web */
+        a[href^="http"]:hover, /* Detecta enlaces que comienzan con "http" */
+        a[href^="https"]:hover { /* Detecta enlaces que comienzan con "https" */
+            color: red; /* Cambia el color del texto a rojo al pasar el ratón */
+        }
+
+        /* Estilo para los enlaces de descarga de documentos (pdf) */
+        a[href$=".pdf"]:hover { /* Detecta enlaces que terminan con ".pdf" */
+            color: green; /* Cambia el color del texto a verde al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+    <p>Acceso a una página web: <a href="http://www.google.es">www.google.es</a></p>
+    <p>Descarga de un documento PDF: <a href="http://www.misitio.es/doc.pdf">www.misitio.es/doc.pdf</a></p>
+</body>
+</html>
